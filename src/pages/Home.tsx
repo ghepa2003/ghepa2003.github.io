@@ -109,7 +109,7 @@ export default function Home() {
                 className="absolute inset-0 w-full h-[120%] -top-[10%]"
               >
                 <img 
-                  src="/images/robolab.jpg" 
+                  src={`${import.meta.env.BASE_URL}images/robolab.jpg`} 
                   alt="Robotic laboratory" 
                   className="w-full h-full object-cover opacity-50 mix-blend-luminosity"
                 />

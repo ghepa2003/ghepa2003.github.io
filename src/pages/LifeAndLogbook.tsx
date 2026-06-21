@@ -22,7 +22,7 @@ const LOGBOOK_POSTS = [
     date: 'Apr 05, 2026',
     readTime: '5 min read',
     excerpt: 'What preparing for a 42km race taught me about nonlinear progression, fatigue management, and holding a steady rhythm when the system is under stress.',
-    image: '/images/marathon.jpg',
+    image: `${import.meta.env.BASE_URL}images/marathon.jpg`,
     link: '#'
   },
   {
@@ -77,7 +77,7 @@ export default function LifeAndLogbook() {
               className="md:col-span-8 relative rounded-[2rem] overflow-hidden group"
             >
               <img 
-                src="/images/marathon.jpg" 
+                src={`${import.meta.env.BASE_URL}images/marathon.jpg`} 
                 alt="Milano Marathon Finisher" 
                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
               />
@@ -98,7 +98,7 @@ export default function LifeAndLogbook() {
                 className="relative rounded-[2rem] overflow-hidden group"
               >
                 <img 
-                  src="/images/cycling.jpg" 
+                  src={`${import.meta.env.BASE_URL}images/cycling.jpg`} 
                   alt="PolimiRide Cremona" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                 />

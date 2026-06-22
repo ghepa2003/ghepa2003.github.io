@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { PageTransition } from '../components/PageTransition';
 import { CinematicGallery } from '../components/CinematicGallery';
 import { useRef } from 'react';
-import { UsersThree, Mountains, BookOpen, Lightbulb, ArrowRight, Target, HourglassMedium } from '@phosphor-icons/react';
+import { BookOpen, Lightbulb, ArrowRight } from '@phosphor-icons/react';
 
 // Logbook Posts (Dummy content)
 const LOGBOOK_POSTS = [
@@ -40,20 +40,20 @@ const LOGBOOK_POSTS = [
 ];
 
 const SPONSORS = [
-  { name: "Marcello Ascani", url: "https://www.youtube.com/@marcelloascani" },
-  { name: "SUPERNOVA", url: "https://www.youtube.com/@StaseraAleCattelan/" },
-  { name: "The BSMT", url: "https://www.youtube.com/@bsmt_basement" },
-  { name: "Nova Lectio", url: "https://www.youtube.com/@NovaLectio" },
-  { name: "Pietro Michelangeli", url: "https://www.youtube.com/@PietroMichelangeli" },
-  { name: "Mr. RIP", url: "https://www.youtube.com/@mr_rip" },
-  { name: "Starting Finance", url: "https://www.youtube.com/@StartingFinance" },
-  { name: "Francesco Oggiano", url: "https://www.youtube.com/@fraoggiano" },
-  { name: "Sourced", url: "https://sourcedweekly.substack.com/" },
-  { name: "Ctrl+Cash", url: "https://ctrlcashwillmedia.substack.com/" },
-  { name: "Popcorn In Smoking", url: "https://popcorninsmoking.substack.com/" },
-  { name: "Scrolling Infinito", url: "https://scrollinginfinito.substack.com/" },
-  { name: "Sciuscià", url: "https://cronachedispogliatoio.substack.com/" },
-  { name: "Caffellattech", url: "https://caffellattech.substack.com/" },
+  { name: "Marcello Ascani", url: "https://www.youtube.com/@marcelloascani", category: "Vlog & Business" },
+  { name: "SUPERNOVA", url: "https://www.youtube.com/@StaseraAleCattelan/", category: "Pop Culture" },
+  { name: "The BSMT", url: "https://www.youtube.com/@bsmt_basement", category: "Interviews" },
+  { name: "Nova Lectio", url: "https://www.youtube.com/@NovaLectio", category: "History & Geo" },
+  { name: "Pietro Michelangeli", url: "https://www.youtube.com/@PietroMichelangeli", category: "Personal Finance" },
+  { name: "Mr. RIP", url: "https://www.youtube.com/@mr_rip", category: "FIRE & Tech" },
+  { name: "Starting Finance", url: "https://www.youtube.com/@StartingFinance", category: "Economy" },
+  { name: "Francesco Oggiano", url: "https://www.youtube.com/@fraoggiano", category: "Digital Media" },
+  { name: "Sourced", url: "https://sourcedweekly.substack.com/", category: "Tech Newsletter" },
+  { name: "Ctrl+Cash", url: "https://ctrlcashwillmedia.substack.com/", category: "Finance Substack" },
+  { name: "Popcorn In Smoking", url: "https://popcorninsmoking.substack.com/", category: "Cinema Substack" },
+  { name: "Scrolling Infinito", url: "https://scrollinginfinito.substack.com/", category: "Society Substack" },
+  { name: "Sciuscià", url: "https://cronachedispogliatoio.substack.com/", category: "Sport Substack" },
+  { name: "Caffellattech", url: "https://caffellattech.substack.com/", category: "Tech & Society" }
 ];
 
 // Duplicate for infinite marquee
@@ -83,7 +83,7 @@ export default function LifeAndLogbook() {
               Off the <span className="text-emerald-500">Grid.</span>
             </h1>
             <p className="text-lg text-slate-600 max-w-[60ch] md:mx-0 mx-auto leading-relaxed">
-              You won’t find me on Instagram. This space is the only official Logbook of my personal journey, balancing endurance sports, curiosity, and team dynamics beyond the code.
+              You can't find me on Instagram. But if you're interested in getting to know me better, you're in the right place. This space is the only official Logbook of my personal journey, balancing endurance sports, curiosity, and team dynamics beyond the code.
             </p>
           </motion.div>
         </main>
@@ -92,73 +92,91 @@ export default function LifeAndLogbook() {
         <CinematicGallery />
 
         <main className="px-4 md:px-12 lg:px-24 max-w-7xl mx-auto mt-32">
-          {/* What Sports Taught Me Section */}
+          {/* What Sports Actually Teach Me Section */}
           <section className="mb-32">
             <div className="flex items-center justify-between mb-12">
-              <h2 className="text-2xl font-bold text-obsidian">Sport-Driven Personality</h2>
+              <h2 className="text-2xl font-bold text-obsidian">What Sports Actually Teach Me</h2>
               <div className="h-px bg-slate-custom/10 flex-grow ml-8"></div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-              {/* Team Dynamics (Wider) */}
+              {/* Card 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="md:col-span-7 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300"
+                className="md:col-span-7 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-center"
               >
-                <UsersThree className="text-3xl text-emerald-500 mb-6" weight="duotone" />
-                <h3 className="text-xl font-bold mb-3 text-obsidian">Team-Oriented</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Years in team sports naturally shaped my collaborative mindset. Working in sync, communicating clearly, and backing up a teammate comes second nature to me. I thrive in shared efforts, not isolated egos.
+                <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest mb-4">1 — ON THE BEGINNING</span>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">Testing the real boundaries</h3>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                  I started just to challenge myself, to find out where my limits actually were—not the ones I imagined, but the real ones. I wanted to understand what can be achieved through pure commitment, dedication, and discipline, even when everyone around assumes it is impossible. That discovery was the starting point for everything else.
                 </p>
               </motion.div>
 
-              {/* Resilience */}
+              {/* Card 2 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="md:col-span-5 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300"
+                className="md:col-span-5 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-center"
               >
-                <Mountains className="text-3xl text-emerald-500 mb-6" weight="duotone" />
-                <h3 className="text-xl font-bold mb-3 text-obsidian">Tenacious & Competitive</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Endurance sports built a competitive drive focused on self-improvement. Whether pushing through a marathon or refining a complex algorithm, my pulse is tuned to never back down until the absolute best result is achieved.
+                <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest mb-4">2 — ON PERSEVERANCE</span>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">On the road, when your legs beg you to stop</h3>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                  At the absolute lowest point of a race, what keeps you pushing isn't leg strength—it’s the memory of every single sunrise ride and the workouts you never missed. I trained specifically to endure that exact moment, and I knew it. That awareness, more than physical fitness, is what gets me across the finish line.
                 </p>
               </motion.div>
 
-              {/* Focus & Planning */}
+              {/* Card 3 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
-                className="md:col-span-5 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300"
+                className="md:col-span-5 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-center"
               >
-                <Target className="text-3xl text-emerald-500 mb-6" weight="duotone" />
-                <h3 className="text-xl font-bold mb-3 text-obsidian">Goal-Focused</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  When a target is set—be it a race finish line or an academic deadline—I lock into focus mode. I excel at filtering distractions and channeling all energy toward the objective.
+                <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest mb-4">3 — ON THE DIALOGUE BETWEEN INDIVIDUAL AND TEAM</span>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">Two kinds of strength, entirely complementary</h3>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                  Team sports taught me how to rely on others and be reliable in return—collaboration, shared goals, and mutual trust. Individual endurance builds something different: inner discipline and the dialogue with your own thoughts when no one is there to push you. Neither represents me more than the other. They speak to each other, and I need both.
                 </p>
               </motion.div>
 
-              {/* Time Management (Wider) */}
+              {/* Card 4 */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="md:col-span-7 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300"
+                className="md:col-span-7 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-center"
               >
-                <HourglassMedium className="text-3xl text-emerald-500 mb-6" weight="duotone" />
-                <h3 className="text-xl font-bold mb-3 text-obsidian">Disciplined & Organized</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  Juggling university labs at PoliMi, R&D at Leonardo S.p.A., and weekly high-mileage training isn't due to luck. It requires a strict, self-imposed time discipline that I carry into every professional project.
+                <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest mb-4">4 — THE LESSON OF THE CRAMPS</span>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">When the plan knows better than you do</h3>
+                <p className="text-sm md:text-base text-slate-600 leading-relaxed">
+                  A marathon, a forced pace pushed slightly beyond what I had prepared for, and severe cramps in the final stretch. It ended well, but it left me with a lesson that reaches far beyond running: sometimes deviating from the plan pays off, but not always—and the difference lies in respecting your limits. More humility, fewer reckless moves.
                 </p>
               </motion.div>
+
+              {/* Card 5 (Full Width) */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.4 }}
+                className="md:col-span-12 bg-obsidian text-ivory border border-obsidian p-8 md:p-12 rounded-[2rem] hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 flex flex-col md:flex-row gap-8 items-start md:items-center justify-between group cursor-default"
+              >
+                <div className="max-w-3xl">
+                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-4 block">5 — ON TODAY, WITHOUT A FINISH LINE</span>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Just a regular run, with nothing to prove</h3>
+                  <p className="text-sm md:text-base text-slate-400 leading-relaxed">
+                    Not every session needs a finish line. Most of them are simply about this: clearing the mind, feeling good, staying sharp, and enjoying nature. And when shared with others, these moments become common ground. Nothing to prove—just the genuine need to be out there.
+                  </p>
+                </div>
+              </motion.div>
+
             </div>
           </section>
 
@@ -176,25 +194,33 @@ export default function LifeAndLogbook() {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="flex flex-col bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:border-emerald-500/30 transition-colors group"
+                className="flex flex-col bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:border-emerald-500/30 transition-colors group h-full"
               >
-                <div className="flex items-start gap-6 flex-grow">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
                     <BookOpen className="text-xl text-emerald-500" weight="duotone" />
                   </div>
                   <div>
-                    <h3 className="text-sm font-mono text-emerald-600 uppercase tracking-widest mb-1">Current Reads</h3>
-                    <h4 className="text-lg font-bold text-obsidian mb-2">Sapiens</h4>
-                    <p className="text-sm text-slate-500 font-medium mb-2">
-                      Yuval Noah Harari
-                    </p>
-                    <p className="text-sm text-slate-600 leading-relaxed">
-                      A brilliant sweep through human evolution, exploring how shared myths and collective imagination allowed Homo Sapiens to dominate the planet and build the complex systems we live in today
-                    </p>
+                    <h3 className="text-sm font-mono text-emerald-600 uppercase tracking-widest">Library</h3>
+                    <h4 className="text-lg font-bold text-obsidian">Reading Archive</h4>
                   </div>
                 </div>
-                <Link to="/reading-archive" className="mt-8 flex justify-between items-center font-bold text-sm text-obsidian group-hover:text-emerald-600 transition-colors cursor-pointer border-t border-slate-100 pt-4 w-full">
-                  <span>View Reading Archive</span>
+
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                  Analog breaks. A collection of books I pick up when the screen gets too loud—ranging from classic narratives to essays on how we behave.
+                </p>
+
+                <div className="bg-slate-50 border border-slate-100 p-5 rounded-xl mb-4 flex-grow">
+                  <p className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest mb-2">Currently Reading</p>
+                  <h4 className="text-base font-bold text-obsidian mb-1">Sapiens</h4>
+                  <p className="text-xs text-slate-500 font-medium mb-3">Yuval Noah Harari</p>
+                  <p className="text-xs text-slate-600 leading-relaxed">
+                    "A brilliant sweep through human evolution, exploring how shared myths and collective imagination allowed Homo Sapiens to dominate the planet and build the complex systems we live in today"
+                  </p>
+                </div>
+
+                <Link to="/reading-archive" className="mt-auto flex justify-between items-center font-bold text-sm text-obsidian group-hover:text-emerald-600 transition-colors cursor-pointer border-t border-slate-100 pt-4 w-full">
+                  <span>Open the Archive</span>
                   <ArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </Link>
               </motion.div>
@@ -207,7 +233,7 @@ export default function LifeAndLogbook() {
                 transition={{ delay: 0.1 }}
                 className="flex flex-col bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:border-emerald-500/30 transition-colors h-full"
               >
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-emerald-500/10 flex items-center justify-center shrink-0">
                     <Lightbulb className="text-xl text-emerald-500" weight="duotone" />
                   </div>
@@ -217,6 +243,10 @@ export default function LifeAndLogbook() {
                   </div>
                 </div>
 
+                <p className="text-sm text-slate-600 leading-relaxed mb-6">
+                  Driven by relentless curiosity. These are the channels, podcasts, and newsletters I dive into to feed my mind outside the lab.
+                </p>
+
                 {/* Infinite Horizontal Marquee Container */}
                 <div className="relative flex-grow flex flex-col justify-center gap-4 overflow-hidden group/ticker [mask-image:linear-gradient(to_right,transparent,white_10%,white_90%,transparent)] py-2">
 
@@ -224,7 +254,10 @@ export default function LifeAndLogbook() {
                   <div className="flex w-max animate-marquee-horizontal group-hover/ticker:[animation-play-state:paused]">
                     {SCROLLING_SPONSORS.map((sponsor, idx) => (
                       <a href={sponsor.url} target="_blank" rel="noopener noreferrer" key={`r1-${idx}`} className="mx-2 px-4 py-2 bg-slate-50 border border-slate-100 rounded-full flex-shrink-0 transition-colors duration-200 hover:border-emerald-200 block group/link">
-                        <span className="text-sm font-bold text-obsidian whitespace-nowrap group-hover/link:text-emerald-500 transition-colors duration-200">{sponsor.name}</span>
+                        <div className="flex items-center">
+                          <span className="text-sm font-bold text-obsidian whitespace-nowrap group-hover/link:text-emerald-500 transition-colors duration-200">{sponsor.name}</span>
+                          <span className="max-w-0 opacity-0 overflow-hidden group-hover/link:max-w-xs group-hover/link:opacity-100 group-hover/link:ml-2 transition-all duration-300 ease-out whitespace-nowrap font-mono text-[11px] text-emerald-500">[{sponsor.category}]</span>
+                        </div>
                       </a>
                     ))}
                   </div>
@@ -233,7 +266,10 @@ export default function LifeAndLogbook() {
                   <div className="flex w-max animate-marquee-horizontal-reverse group-hover/ticker:[animation-play-state:paused]">
                     {SCROLLING_SPONSORS.map((sponsor, idx) => (
                       <a href={sponsor.url} target="_blank" rel="noopener noreferrer" key={`r2-${idx}`} className="mx-2 px-4 py-2 bg-slate-50 border border-slate-100 rounded-full flex-shrink-0 transition-colors duration-200 hover:border-emerald-300 block group/link">
-                        <span className="text-sm font-bold text-emerald-700 whitespace-nowrap group-hover/link:text-emerald-500 transition-colors duration-200">{sponsor.name}</span>
+                        <div className="flex items-center">
+                          <span className="text-sm font-bold text-emerald-700 whitespace-nowrap group-hover/link:text-emerald-500 transition-colors duration-200">{sponsor.name}</span>
+                          <span className="max-w-0 opacity-0 overflow-hidden group-hover/link:max-w-xs group-hover/link:opacity-100 group-hover/link:ml-2 transition-all duration-300 ease-out whitespace-nowrap font-mono text-[11px] text-emerald-500">[{sponsor.category}]</span>
+                        </div>
                       </a>
                     ))}
                   </div>
@@ -242,7 +278,10 @@ export default function LifeAndLogbook() {
                   <div className="flex w-max animate-marquee-horizontal-fast group-hover/ticker:[animation-play-state:paused]">
                     {SCROLLING_SPONSORS.map((sponsor, idx) => (
                       <a href={sponsor.url} target="_blank" rel="noopener noreferrer" key={`r3-${idx}`} className="mx-2 px-4 py-2 bg-slate-50 border border-slate-100 rounded-full flex-shrink-0 transition-colors duration-200 hover:border-emerald-200 block group/link">
-                        <span className="text-sm font-bold text-slate-500 whitespace-nowrap group-hover/link:text-emerald-500 transition-colors duration-200">{sponsor.name}</span>
+                        <div className="flex items-center">
+                          <span className="text-sm font-bold text-slate-500 whitespace-nowrap group-hover/link:text-emerald-500 transition-colors duration-200">{sponsor.name}</span>
+                          <span className="max-w-0 opacity-0 overflow-hidden group-hover/link:max-w-xs group-hover/link:opacity-100 group-hover/link:ml-2 transition-all duration-300 ease-out whitespace-nowrap font-mono text-[11px] text-emerald-500">[{sponsor.category}]</span>
+                        </div>
                       </a>
                     ))}
                   </div>

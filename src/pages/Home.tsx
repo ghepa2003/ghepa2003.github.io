@@ -115,12 +115,31 @@ export default function Home() {
                             MSc PoliMi
                           </p>
                         </div>
-                        <div>
-                          <p className="text-slate-500 font-mono text-[9px] uppercase mb-0.5">Current Role</p>
-                          <p className="text-ivory font-medium text-xs sm:text-sm flex items-start sm:items-center gap-1.5 leading-tight">
-                            <TerminalWindow className="text-emerald-500 shrink-0 mt-0.5 sm:mt-0" />
-                            Robotics Research Intern @ Leonardo
-                          </p>
+                        <div className="relative h-9">
+                          {/* Standard State */}
+                          <div className="absolute inset-0 transition-opacity duration-300 ease-in-out group-hover:opacity-0 flex flex-col justify-start pointer-events-none">
+                            <p className="text-slate-500 font-mono text-[9px] uppercase mb-0.5">Current Role</p>
+                            <p className="text-ivory font-medium text-xs sm:text-sm flex items-start sm:items-center gap-1.5 leading-tight">
+                              <TerminalWindow className="text-emerald-500 shrink-0 mt-0.5 sm:mt-0" />
+                              Robotics Research Intern @ Leonardo
+                            </p>
+                          </div>
+
+                          {/* Hover State: Links */}
+                          <div className="absolute inset-0 transition-opacity duration-300 ease-in-out opacity-0 group-hover:opacity-100 flex flex-col justify-start pointer-events-none group-hover:pointer-events-auto">
+                            <p className="text-slate-500 font-mono text-[9px] uppercase mb-0.5">Network</p>
+                            <div className="flex items-center gap-3">
+                              <a href="https://linkedin.com/in/lorenzoghessi" target="_blank" rel="noopener noreferrer" className="font-mono text-xs sm:text-sm text-slate-400 hover:text-emerald-500 transition-colors">
+                                [LinkedIn]
+                              </a>
+                              <a href="https://github.com/lorenzoghessi" target="_blank" rel="noopener noreferrer" className="font-mono text-xs sm:text-sm text-slate-400 hover:text-emerald-500 transition-colors">
+                                [GitHub]
+                              </a>
+                              <a href="mailto:ghessilorenzo@gmail.com" className="font-mono text-xs sm:text-sm text-slate-400 hover:text-emerald-500 transition-colors">
+                                [Email]
+                              </a>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

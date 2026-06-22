@@ -22,8 +22,11 @@ const SpotlightCard = ({ children, className = '' }: { children: React.ReactNode
 export const ROSTerminalCard = () => {
   const allLogs = [
     { text: '[INFO] /master_node initializing...', color: 'text-slate-300' },
+    { text: '[INFO] Spawning ur_kinematics_solver...', color: 'text-slate-300' },
     { text: '[INFO] Establishing bridge connection...', color: 'text-slate-300' },
     { text: '[WARN] Compensating network latency: 42ms...', color: 'text-amber-400' },
+    { text: '[INFO] Computing inverse dynamics...', color: 'text-slate-300' },
+    { text: '[INFO] Publishing joint states (topic: /joint_states)', color: 'text-slate-300' },
     { text: '[OK] Teleoperation loop stable at 500Hz', color: 'text-emerald-500' },
   ];
   
@@ -47,16 +50,19 @@ export const ROSTerminalCard = () => {
 
   return (
     <SpotlightCard className="md:col-span-2 min-h-[300px]">
-      <div className="flex items-center gap-3 mb-4">
-        <TerminalWindow className="text-emerald-500 text-2xl" />
-        <h3 className="text-xl font-bold text-ivory">Robotics & Teleoperation</h3>
-      </div>
-      <p className="text-slate-300 mb-6 leading-relaxed">
-        Developing software architectures for manipulator kinematics and remote-control loops using ROS and C++.
-      </p>
-      
-      <div className="mt-auto bg-obsidian border border-white/5 rounded-xl p-4 font-mono text-xs overflow-hidden h-[120px] flex flex-col justify-end">
-        <AnimatePresence>
+      <div className="flex flex-col h-full gap-6">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <TerminalWindow className="text-emerald-500 text-2xl" />
+            <h3 className="text-xl font-bold text-ivory">Robotics & Teleoperation</h3>
+          </div>
+          <p className="text-slate-300 leading-relaxed">
+            Developing software architectures for manipulator kinematics and remote-control loops using ROS and C++.
+          </p>
+        </div>
+        
+        <div className="bg-obsidian border border-white/5 rounded-xl p-4 font-mono text-xs overflow-hidden min-h-[140px] flex-grow flex flex-col justify-end w-full">
+          <AnimatePresence>
           {logs.map((log, i) => (
             <motion.div 
               key={`${i}-${log.text}`}
@@ -73,7 +79,8 @@ export const ROSTerminalCard = () => {
             transition={{ repeat: Infinity, duration: 0.8 }}
             className="w-2 h-4 bg-emerald-500 mt-1"
           />
-        </AnimatePresence>
+          </AnimatePresence>
+        </div>
       </div>
     </SpotlightCard>
   );
@@ -82,16 +89,19 @@ export const ROSTerminalCard = () => {
 export const StepResponseCard = () => {
   return (
     <SpotlightCard className="min-h-[300px]">
-      <div className="flex items-center gap-3 mb-4">
-        <ChartLineUp className="text-emerald-500 text-2xl" />
-        <h3 className="text-xl font-bold text-ivory">Control Systems</h3>
-      </div>
-      <p className="text-slate-300 mb-6 text-sm leading-relaxed">
-        Designing and simulating closed-loop controllers (PID, LQR) in MATLAB/Simulink to stabilize dynamic systems and optimize performance.
-      </p>
+      <div className="flex flex-col h-full justify-between gap-6">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <ChartLineUp className="text-emerald-500 text-2xl" />
+            <h3 className="text-xl font-bold text-ivory">Control Systems</h3>
+          </div>
+          <p className="text-slate-300 text-sm leading-relaxed">
+            Designing and simulating closed-loop controllers (PID, LQR) in MATLAB/Simulink to stabilize dynamic systems and optimize performance.
+          </p>
+        </div>
 
-      <div className="mt-auto relative h-[140px] w-full border-l-2 border-b-2 border-slate-700/50 flex items-end">
-        <svg viewBox="0 0 200 100" className="w-full h-full overflow-visible" preserveAspectRatio="none">
+        <div className="mt-auto h-[140px] min-h-[140px] w-full border-l-2 border-b-2 border-slate-700/50 flex items-end">
+          <svg viewBox="0 0 200 100" className="w-full h-full overflow-visible" preserveAspectRatio="none">
           {/* Grid lines */}
           <line x1="0" y1="25" x2="200" y2="25" stroke="rgba(255,255,255,0.05)" strokeDasharray="4 4" />
           <line x1="0" y1="50" x2="200" y2="50" stroke="rgba(255,255,255,0.05)" strokeDasharray="4 4" />
@@ -120,6 +130,7 @@ export const StepResponseCard = () => {
           />
         </svg>
       </div>
+      </div>
     </SpotlightCard>
   );
 };
@@ -137,20 +148,23 @@ export const SFCDiagramCard = () => {
 
   return (
     <SpotlightCard className="min-h-[300px]">
-      <div className="flex items-center gap-3 mb-4">
-        <GitBranch className="text-emerald-500 text-2xl" />
-        <h3 className="text-xl font-bold text-ivory">Industrial Automation</h3>
-      </div>
-      <p className="text-slate-300 mb-6 text-sm leading-relaxed">
-        Writing reliable PLC logic, programming finite state machines, and managing hardware commissioning for industrial automation loops.
-      </p>
+      <div className="flex flex-col h-full justify-between gap-6">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <GitBranch className="text-emerald-500 text-2xl" />
+            <h3 className="text-xl font-bold text-ivory">Industrial Automation</h3>
+          </div>
+          <p className="text-slate-300 text-sm leading-relaxed">
+            Writing reliable PLC logic, programming finite state machines, and managing hardware commissioning for industrial automation loops.
+          </p>
+        </div>
 
-      <div className="mt-auto flex flex-col items-center justify-center gap-4 py-4 relative">
-        {/* Connecting line */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 h-0.5 bg-slate-800 -z-10"></div>
-        
-        <div className="flex justify-between w-full px-2">
-          {states.map((state, i) => {
+        <div className="mt-auto h-[140px] min-h-[140px] w-full flex justify-center items-center relative">
+          {/* Connecting line */}
+          <div className="absolute top-1/2 -translate-y-1/2 left-4 right-4 h-0.5 bg-slate-800 -z-10"></div>
+          
+          <div className="w-full flex justify-center items-center gap-4">
+            {states.map((state, i) => {
             const isActive = activeState === i;
             return (
               <div key={state} className="flex flex-col items-center relative">
@@ -176,6 +190,7 @@ export const SFCDiagramCard = () => {
             );
           })}
         </div>
+      </div>
       </div>
     </SpotlightCard>
   );

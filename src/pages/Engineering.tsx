@@ -87,7 +87,7 @@ export default function Engineering() {
                 A structured breakdown of my technical background, academic path, and engineering projects in robotics and control automation.
               </p>
               
-              <div className="space-y-4 font-mono text-xs text-slate-300 mb-12">
+              <div className="space-y-4 font-mono text-xs text-slate-300 mb-10">
                 <div className="flex justify-between border-b border-white/5 pb-2">
                   <span>System.Status</span>
                   <span className="text-emerald-500">Nominal</span>
@@ -99,6 +99,35 @@ export default function Engineering() {
                 <div className="flex justify-between border-b border-white/5 pb-2">
                   <span>Active.Focus</span>
                   <span className="text-ivory font-bold">[ROS, Control, PLC]</span>
+                </div>
+              </div>
+
+              {/* Technical Stack */}
+              <div className="mb-12">
+                <div className="flex items-center gap-4 mb-6">
+                  <h2 className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Technical Stack</h2>
+                  <div className="h-px bg-white/10 flex-grow"></div>
+                </div>
+                
+                <div className="space-y-4">
+                  <div>
+                    <span className="font-bold text-ivory text-sm block mb-1">Software & Tools</span>
+                    <span className="font-mono text-xs text-slate-300 leading-relaxed">
+                      ROS/ROS2, Linux (Ubuntu), MATLAB/Simulink, ABB RobotStudio, SolidWorks, AutoCAD
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-bold text-ivory text-sm block mb-1">Programming</span>
+                    <span className="font-mono text-xs text-slate-300 leading-relaxed">
+                      C/C++, Python, PLC Programming (Ladder, ST, SFC)
+                    </span>
+                  </div>
+                  <div>
+                    <span className="font-bold text-ivory text-sm block mb-1">Core Expertise</span>
+                    <span className="font-mono text-xs text-slate-300 leading-relaxed">
+                      Multivariable Control, Dynamic Systems Modeling, Industrial & Mobile Robotics, Industrial Communication Systems, Computer Vision, Hardware Commissioning
+                    </span>
+                  </div>
                 </div>
               </div>
 

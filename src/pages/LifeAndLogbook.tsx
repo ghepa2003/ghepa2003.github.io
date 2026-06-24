@@ -147,7 +147,7 @@ export default function LifeAndLogbook() {
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">The value of structured preparation</h3>
                 <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                  A marathon, a forced pace pushed slightly beyond my preparation, and severe cramps in the final stretch. While it ended well, it left me with a clear lesson on the importance of strict organization and method: talent and willpower can only get you so far without a structured plan. Real performance, whether on the road or inside a lab, relies on respecting the process, managing resources smartly, and avoiding reckless shortcuts.
+                  A marathon, a forced pace pushed slightly beyond my preparation, and severe cramps in the final stretch. While it ended well, it left me with a clear lesson on the importance of strict organization and method: talent and willpower can only get you so far without a structured plan. Real performance relies on respecting the process, managing resources smartly, and avoiding reckless shortcuts.
                 </p>
               </motion.div>
 

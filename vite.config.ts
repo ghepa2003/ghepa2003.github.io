@@ -5,7 +5,7 @@ import fs from 'fs'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/lorenzoghessi.github.io/',
+  base: '/',
   plugins: [
     react(), 
     tailwindcss(),

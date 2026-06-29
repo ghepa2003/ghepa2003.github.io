@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Engineering from './pages/Engineering';
 import LifeAndLogbook from './pages/LifeAndLogbook';
 import ReadingArchive from './pages/ReadingArchive';
+import RobolabArticle from './pages/RobolabArticle';
 import { useEffect } from 'react';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Home />} />
           <Route path="/engineering" element={<Engineering />} />
+          <Route path="/engineering/robolab" element={<RobolabArticle />} />
           <Route path="/life" element={<LifeAndLogbook />} />
           <Route path="/reading-archive" element={<ReadingArchive />} />
         </Routes>

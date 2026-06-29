@@ -41,19 +41,25 @@ const LOGBOOK_POSTS = [
 
 const SPONSORS = [
   { name: "Marcello Ascani", url: "https://www.youtube.com/@marcelloascani", category: "Vlog & Business" },
-  { name: "SUPERNOVA", url: "https://www.youtube.com/@StaseraAleCattelan/", category: "Pop Culture" },
-  { name: "The BSMT", url: "https://www.youtube.com/@bsmt_basement", category: "Interviews" },
-  { name: "Nova Lectio", url: "https://www.youtube.com/@NovaLectio", category: "History & Geo" },
-  { name: "Pietro Michelangeli", url: "https://www.youtube.com/@PietroMichelangeli", category: "Personal Finance" },
   { name: "Mr. RIP", url: "https://www.youtube.com/@mr_rip", category: "FIRE & Tech" },
-  { name: "Starting Finance", url: "https://www.youtube.com/@StartingFinance", category: "Economy" },
-  { name: "Francesco Oggiano", url: "https://www.youtube.com/@fraoggiano", category: "Digital Media" },
   { name: "Sourced", url: "https://sourcedweekly.substack.com/", category: "Tech Newsletter" },
   { name: "Ctrl+Cash", url: "https://ctrlcashwillmedia.substack.com/", category: "Finance Substack" },
   { name: "Popcorn In Smoking", url: "https://popcorninsmoking.substack.com/", category: "Cinema Substack" },
   { name: "Scrolling Infinito", url: "https://scrollinginfinito.substack.com/", category: "Society Substack" },
   { name: "Sciuscià", url: "https://cronachedispogliatoio.substack.com/", category: "Sport Substack" },
-  { name: "Caffellattech", url: "https://caffellattech.substack.com/", category: "Tech & Society" }
+  { name: "Caffellattech", url: "https://caffellattech.substack.com/", category: "Tech & Society" },
+  { name: "Asianometry", url: "https://www.youtube.com/@Asianometry", category: "Tech History & Silicon" },
+  { name: "The Pragmatic Engineer", url: "https://www.pragmaticengineer.com/", category: "Tech Newsletter" },
+  { name: "Rational Reminder", url: "https://rationalreminder.ca/", category: "Quantitative Finance" },
+  { name: "Ben Felix", url: "https://www.youtube.com/@BenFelixCFA", category: "Personal Finance & Data" },
+  { name: "Guerre di Rete", url: "https://guerredirete.substack.com/", category: "Cybersecurity & Geopolitics" },
+  { name: "GioPizzi", url: "https://www.youtube.com/@GioPizzi", category: "Politics & Society" },
+  { name: "Chapeau", url: "https://www.youtube.com/@chapeau_podcast", category: "Interviews & Culture" },
+  { name: "Noodles", url: "https://www.youtube.com/@NoodlesPodcast", category: "Cinema & Pop Culture" },
+  { name: "Nick Bare", url: "https://www.youtube.com/@NickBareFitness", category: "Fitness & Business" },
+  { name: "Parabellum", url: "https://www.youtube.com/@ParabellumStoria", category: "History & Military Analysis" },
+  { name: "Omero", url: "https://www.youtube.com/@omeropodcast", category: "Outdoor & Bikepacking" },
+  { name: "Domenico Greselin", url: "https://www.youtube.com/@domenicogreselin", category: "Endurance & Hybrid Athlete" }
 ];
 
 // Duplicate for infinite marquee
@@ -111,9 +117,9 @@ export default function LifeAndLogbook() {
                 <div className="min-h-[40px] mb-2">
                   <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest">1 — ON PERSEVERANCE</span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">The habit of building step by step</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">Building step by step</h3>
                 <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                  While doing sports, you quickly learn that big goals aren't achieved through sudden spikes of adrenaline, but through weeks of invisible, boring consistency. The final outcome remains completely hidden until you cross the finish line; until then, it’s just about trusting the daily repetition and keeping a steady cadence when the task gets heavy. It builds a simple mindset: you accept the slow process, knowing that results only appear at the very end.
+                  Sport teaches you pretty quickly that big goals don't come from sudden spikes of adrenaline, but from weeks of boring, invisible consistency. You don't see the final result until you actually cross the finish line. Until then, it’s just about trusting the daily repetition and keeping your head down when the workload gets heavy. It’s a simple mindset where you accept the process, knowing the reward only comes at the very end.
                 </p>
               </motion.div>
 
@@ -126,11 +132,11 @@ export default function LifeAndLogbook() {
                 className="md:col-span-4 bg-white border border-slate-custom/10 p-8 rounded-[2rem] hover:shadow-xl hover:border-emerald-500/30 transition-all duration-300 flex flex-col justify-start"
               >
                 <div className="min-h-[40px] mb-2">
-                  <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest">2 — ON THE DIALOGUE BETWEEN INDIVIDUAL AND TEAM</span>
+                  <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest">2 — INDIVIDUAL VS TEAM</span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">Two kinds of strength, entirely complementary</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">Two sides of the same coin</h3>
                 <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                  Team sports taught me how to rely on others and be reliable in return collaboration, shared goals, and mutual trust. Individual endurance builds something different: inner discipline and the dialogue with your own thoughts when no one is there to push you. Neither represents me more than the other. They speak to each other, and I think both are necessary.
+                  Playing in a team taught me how to rely on others and, above all, how to be reliable in return, since everything revolves around trust and shared goals. Individual endurance, on the other hand, builds something completely different, like inner discipline and the ability to talk to your own thoughts when nobody is there to push you. I don't feel more like one or the other, I just think you need both to stay balanced.
                 </p>
               </motion.div>
 
@@ -145,9 +151,9 @@ export default function LifeAndLogbook() {
                 <div className="min-h-[40px] mb-2">
                   <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest">3 — THE LESSON OF THE CRAMPS</span>
                 </div>
-                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">The value of structured preparation</h3>
+                <h3 className="text-xl md:text-2xl font-bold mb-4 text-obsidian">No shortcuts allowed</h3>
                 <p className="text-sm md:text-base text-slate-600 leading-relaxed">
-                  A marathon, a forced pace pushed slightly beyond my preparation, and severe cramps in the final stretch. While it ended well, it left me with a clear lesson on the importance of strict organization and method: talent and willpower can only get you so far without a structured plan. Real performance relies on respecting the process, managing resources smartly, and avoiding reckless shortcuts.
+                  During a marathon, pushing a pace slightly beyond what I had actually trained for resulted in severe cramps in the final stretch. I managed to finish it, but it left me with a massive lesson, which is that willpower and raw talent can only get you so far without a structured plan. Real performance comes down to respecting the prep work, managing resources smartly, and avoiding reckless shortcuts.
                 </p>
               </motion.div>
 
@@ -160,10 +166,10 @@ export default function LifeAndLogbook() {
                 className="md:col-span-12 bg-obsidian text-ivory border border-obsidian p-8 md:p-12 rounded-[2rem] hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 flex flex-col md:flex-row gap-8 items-start md:items-center justify-between group cursor-default"
               >
                 <div className="max-w-3xl">
-                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-4 block">4 — ON TODAY, WITHOUT A FINISH LINE</span>
+                  <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-widest mb-4 block">4 — RUNNING FOR RUNNING'S SAKE</span>
                   <h3 className="text-2xl md:text-3xl font-bold mb-4 text-white">Just a regular run, with nothing to prove</h3>
                   <p className="text-sm md:text-base text-slate-400 leading-relaxed">
-                    Not every session needs a finish line. Most of them are simply about clearing the mind, feeling good, staying sharp, and enjoying nature. And when shared with others, these moments become common ground. Nothing to prove, just the genuine need to be out there.
+                    Not every single session needs a finish line or a race to justify it. Most of the time, it's just about clearing my head after a long day, staying sharp, and enjoying the outdoors. When shared with friends, it simply becomes a great way to catch up without any metrics to beat or egos involved, just the genuine need to be out there moving.
                   </p>
                 </div>
               </motion.div>

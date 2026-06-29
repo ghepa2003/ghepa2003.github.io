@@ -73,16 +73,16 @@ export default function ReadingArchive() {
             animate={{ opacity: 1, y: 0 }}
             className="mb-16"
           >
-            <Link to="/life-and-logbook" className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-emerald-500 transition-colors mb-8 group">
+            <Link to="/life" className="inline-flex items-center gap-2 text-sm font-bold text-slate-400 hover:text-emerald-500 transition-colors mb-8 group">
               <ArrowLeft className="group-hover:-translate-x-1 transition-transform" />
-              <span>Back to Logbook</span>
+              <span>Back to Life</span>
             </Link>
 
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter mb-4 text-obsidian">
               Reading <span className="text-emerald-500">Archive.</span>
             </h1>
             <p className="text-lg text-slate-600">
-              A curated collection of the books that shaped my mindset.
+              A record of what I'm reading, from non-fiction to classics..
             </p>
           </motion.div>
 

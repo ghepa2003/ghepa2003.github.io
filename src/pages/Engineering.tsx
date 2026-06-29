@@ -1,8 +1,10 @@
 import { motion } from 'framer-motion';
 import { PageTransition } from '../components/PageTransition';
 import { GraduationCap, ArrowRight, FilePdf } from '@phosphor-icons/react';
+import { useNavigate } from 'react-router-dom';
 
 export default function Engineering() {
+  const navigate = useNavigate();
   const experiences = [
     /* TODO: Uncomment to restore Leonardo S.p.A. experience when ready
     {
@@ -17,7 +19,7 @@ export default function Engineering() {
     },
     */
     {
-      company: 'Assolombarda',
+      company: 'Assolombarda - Fondazione Ingegno',
       role: 'Laboratory Coordinator',
       period: '09/2021 – Present',
       location: 'Monza',
@@ -86,14 +88,10 @@ export default function Engineering() {
 
   const articles = [
     {
-      title: 'Un capitolo chiuso: 4 anni al RoboLab di Assolombarda',
-      desc: 'Riflessioni su cosa significa insegnare la robotica a oltre 1000 studenti e coordinare un team tecnico.',
-      tags: ['Leadership', 'Mentorship']
-    },
-    {
-      title: 'Oltre la latenza: la mia esperienza in Leonardo S.p.A.',
-      desc: 'La vera sfida della teleoperazione non è solo il codice C++, ma testare l\'hardware reale e imparare a lavorare in un team di ricerca.',
-      tags: ['R&D', 'Growth']
+      title: 'Robolab: Four Years of Robotics, Problem Solving, and Team Management',
+      desc: 'Reflection on what it means to teach robotics to over 1000 students and coordinate an educational laboratory.',
+      tags: ["Robotics", "Project Management", "Team Leadership", "STEM Education"],
+      link: '/engineering/robolab'
     }
   ];
 
@@ -101,15 +99,15 @@ export default function Engineering() {
     <PageTransition>
       <main className="min-h-[100dvh] pt-32 pb-24 px-4 md:px-12 lg:px-24 max-w-[1400px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
-          
+
           {/* Header Column (Sticky Sidebar) */}
           <div className="lg:col-span-4">
             <div className="sticky top-32">
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-ivory">Engineering<br/>Log.</h1>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tighter mb-4 text-ivory">Engineering<br />Log.</h1>
               <p className="text-slate-300 mb-8 max-w-[40ch] leading-relaxed">
                 A structured breakdown of my technical background, academic path, and engineering projects in robotics and control automation.
               </p>
-              
+
 
               {/* Technical Stack */}
               <div className="mb-12">
@@ -117,7 +115,7 @@ export default function Engineering() {
                   <h2 className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">Technical Stack</h2>
                   <div className="h-px bg-white/10 flex-grow"></div>
                 </div>
-                
+
                 <div className="space-y-4">
                   <div>
                     <span className="font-bold text-ivory text-sm block mb-1">Software & Tools</span>
@@ -141,7 +139,7 @@ export default function Engineering() {
               </div>
 
               {/* Download CV Button */}
-              <motion.a 
+              <motion.a
                 href={`${import.meta.env.BASE_URL}ghessi_CV.pdf`}
                 download="Lorenzo_Ghessi_CV.pdf"
                 whileHover={{ scale: 1.05 }}
@@ -160,7 +158,7 @@ export default function Engineering() {
             {/* Education Section */}
             <section>
               <h2 className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-8 border-b border-white/10 pb-2">00 // Education</h2>
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -198,13 +196,13 @@ export default function Engineering() {
                 </div>
               </motion.div>
             </section>
-            
+
             {/* Experience Section */}
             <section>
               <h2 className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-8 border-b border-white/10 pb-2">01 // Experience</h2>
               <div className="flex flex-col space-y-12">
                 {experiences.map((exp, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -238,7 +236,7 @@ export default function Engineering() {
               <h2 className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-8 border-b border-white/10 pb-2">02 // Key Projects</h2>
               <div className="flex flex-col space-y-0 divide-y divide-white/5 border-t border-white/5">
                 {projects.map((proj, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
@@ -272,8 +270,9 @@ export default function Engineering() {
               <h2 className="text-xs font-mono text-slate-400 uppercase tracking-widest mb-8 border-b border-white/10 pb-2">03 // Experience Notes</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {articles.map((article, i) => (
-                  <motion.div 
+                  <motion.div
                     key={i}
+                    onClick={() => article.link && navigate(article.link)}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     whileHover={{ y: -5 }}
@@ -282,7 +281,7 @@ export default function Engineering() {
                   >
                     {/* Spotlight radial gradient */}
                     <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(16,185,129,0.1),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
-                    
+
                     <div className="relative z-10 flex flex-col h-full">
                       <div className="flex flex-wrap gap-2 mb-4">
                         {article.tags.map((tag, j) => (

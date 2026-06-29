@@ -5,7 +5,7 @@ import { ArrowLeft, Translate } from '@phosphor-icons/react';
 import { Link } from 'react-router-dom';
 
 export default function RobolabArticle() {
-  const [lang, setLang] = useState<'it' | 'en'>('it');
+  const [lang, setLang] = useState<'it' | 'en'>('en');
 
   const content = {
     it: {

@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 const images = [
-  { src: 'images/robotica.jpeg', alt: 'Robotics', className: 'w-[60vw] md:w-[25vw] aspect-[3/4] object-cover' },
+  { src: 'images/montagna.JPG', alt: 'Mountains', className: 'w-[60vw] md:w-[25vw] aspect-[3/4] object-cover' },
   { src: 'images/marocco.jpeg', alt: 'Marocco Trip', className: 'w-[55vw] md:w-[22vw] aspect-[4/5] object-cover' },
   { src: 'images/neve.jpeg', alt: 'Snow', className: 'w-[65vw] md:w-[28vw] aspect-[3/4] object-cover' },
   { src: 'images/aurora.jpeg', alt: 'Aurora Borealis', className: 'w-[50vw] md:w-[22vw] aspect-[4/5] object-cover' },

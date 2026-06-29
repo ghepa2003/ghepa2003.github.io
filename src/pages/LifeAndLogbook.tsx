@@ -47,10 +47,10 @@ const SPONSORS = [
   { name: "Popcorn In Smoking", url: "https://popcorninsmoking.substack.com/", category: "Cinema Substack" },
   { name: "Scrolling Infinito", url: "https://scrollinginfinito.substack.com/", category: "Society Substack" },
   { name: "Sciuscià", url: "https://cronachedispogliatoio.substack.com/", category: "Sport Substack" },
-  { name: "Caffellattech", url: "https://caffellattech.substack.com/", category: "Tech & Society" },
+  { name: "Actually", url: "https://www.youtube.com/@Actually_pod", category: "Global Trends & Society" },
   { name: "Asianometry", url: "https://www.youtube.com/@Asianometry", category: "Tech History & Silicon" },
-  { name: "The Pragmatic Engineer", url: "https://www.pragmaticengineer.com/", category: "Tech Newsletter" },
-  { name: "Rational Reminder", url: "https://rationalreminder.ca/", category: "Quantitative Finance" },
+  { name: "The Pragmatic Engineer", url: "https://newsletter.pragmaticengineer.com/", category: "Tech Newsletter" },
+  { name: "Rational Reminder", url: "https://www.youtube.com/@rationalreminder", category: "Quantitative Finance" },
   { name: "Ben Felix", url: "https://www.youtube.com/@BenFelixCFA", category: "Personal Finance & Data" },
   { name: "Guerre di Rete", url: "https://guerredirete.substack.com/", category: "Cybersecurity & Geopolitics" },
   { name: "GioPizzi", url: "https://www.youtube.com/@GioPizzi", category: "Politics & Society" },
@@ -58,8 +58,8 @@ const SPONSORS = [
   { name: "Noodles", url: "https://www.youtube.com/@NoodlesPodcast", category: "Cinema & Pop Culture" },
   { name: "Nick Bare", url: "https://www.youtube.com/@NickBareFitness", category: "Fitness & Business" },
   { name: "Parabellum", url: "https://www.youtube.com/@ParabellumStoria", category: "History & Military Analysis" },
-  { name: "Omero", url: "https://www.youtube.com/@omeropodcast", category: "Outdoor & Bikepacking" },
-  { name: "Domenico Greselin", url: "https://www.youtube.com/@domenicogreselin", category: "Endurance & Hybrid Athlete" }
+  { name: "Omero", url: "https://www.youtube.com/@omero7959", category: "Outdoor & Bikepacking" },
+  { name: "Domenico Greselin", url: "https://www.youtube.com/@domenico_greselin", category: "Endurance & Hybrid Athlete" }
 ];
 
 // Duplicate for infinite marquee
